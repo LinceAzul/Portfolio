@@ -14,8 +14,8 @@ html {
 
   --section-background-color: linear-gradient(
     to bottom left,
-    rgba(230, 230, 230, 0.9),  /* Gris claro, neutro y profesional */
-    rgba(47, 79, 79, 0.85)     /* Gris oscuro con matiz verde azulado, da seriedad */
+    rgba(151, 140, 140, 0.9),  /* Gris claro, neutro y profesional */
+    rgba(40, 59, 59, 0.85)     /* Gris oscuro con matiz verde azulado, da seriedad */
   );
   
   --image-gradient: linear-gradient(
@@ -422,7 +422,7 @@ button:focus {
 }
 
 .icon-colour {
-  color: #3b0c86 !important;
+  color: #220c86 !important;
 }
 
 /* --------- */
@@ -568,6 +568,98 @@ button:focus {
 /* --------- */
 /* About */
 /* --------- */
+
+/* About subset: Certification List*/
+
+.certification-list .list-group-item {
+  background-color: #1e3a5f;
+  color: #f0f4f8;
+  border: none;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.certification-list .list-group-item:hover::before {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #0077cc;
+}
+
+.certification-list .list-group-item:hover {
+  color: #0099ff;
+  box-shadow: 0 0 5px #0099ff;
+  text-shadow: 0 0 2px #0099ff;
+  background-color: #2a4d6f;
+}
+
+/* About subset: Skillset */
+/* Container for the skill cards */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Keeps space between cards */
+  gap: 20px; /* Space between items */
+  margin-top: 40px; /* Margin above the skills section */
+}
+
+/* Skill card base styling */
+.skill-card {
+  background-color: #1e3a5f !important; /* Set background color to #1e3a5f */
+  color: #f0f4f8 !important; /* Text color */
+  border: none; /* Remove border */
+  padding: 15px; /* Inner padding */
+  margin: 10px 0; /* Space between cards */
+  border-radius: 12px; /* Rounded corners */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition effects */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+  text-align: center; /* Center text */
+}
+
+/* Styling for card titles */
+.skill-card h3 {
+  font-size: 1.4rem; /* Font size */
+  margin-bottom: 10px; /* Space below the title */
+  color: #00aaff; /* Lighter blue color for titles */
+  border-bottom: 2px solid #00aaff; /* Border below the title */
+  padding-bottom: 8px; /* Padding below the title */
+  text-transform: uppercase; /* Uppercase letters */
+}
+
+/* Paragraph style inside cards */
+.skill-card p {
+  font-size: 1rem; /* Font size for paragraphs */
+  line-height: 1.5; /* Line height */
+  margin: 0; /* Remove margin */
+}
+
+/* Hover effects for skill cards */
+.skill-card:hover::before {
+  transform: scale(1.05); /* Scale effect on hover */
+  box-shadow: 0 0 15px #0077cc; /* Light blue shadow on hover */
+}
+
+.skill-card:hover {
+  color: #0099ff !important;/* Change text color on hover */
+  box-shadow: 0 0 5px #0099ff; /* Shadow effect on hover */
+  text-shadow: 0 0 2px #0099ff; /* Text shadow effect */
+  background-color: #2a4d6f !important; /* Lighter background color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skill-card {
+    flex: 0 1 calc(50% - 20px); /* Two cards per row on medium screens */
+    width: 100%; /* Full width on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-card {
+    flex: 0 1 100%; /* One card per row on small screens */
+  }
+}
+
 
 .about-section {
   position: relative !important;

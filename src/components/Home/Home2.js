@@ -70,7 +70,7 @@ function Home2() {
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
                 >
-                  <AiOutlineLock />
+                  <AiFillGithub />
                 </a>
               </li>
               <li className="social-icons">
@@ -81,6 +81,16 @@ function Home2() {
                   className="icon-colour  home-social-icons"
                 >
                   <FaLinkedinIn />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://tryhackme.com/r/p/LinceAzul"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <AiOutlineLock />
                 </a>
               </li>
             </ul>
