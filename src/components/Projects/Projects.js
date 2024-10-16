@@ -16,11 +16,11 @@ function Projects() {
         </h1>
         <br />
         <p style={{ color: "white" }}>
-        In my free time, I enjoy working on projects that help me apply and deepen the theoretical knowledge I've gained
-        over the years. These projects allow me to learn by doing, experimenting, and putting my skills into practice.
-        <br />
-        <br />
-        If you have any ideas or would like to collaborate on a project, feel free to reach out.
+          In my free time, I enjoy working on projects that help me apply and deepen the theoretical knowledge I've gained
+          over the years. These projects allow me to learn by doing, experimenting, and putting my skills into practice.
+          <br />
+          <br />
+          If you have any ideas or would like to collaborate on a project, feel free to reach out.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={5} className="project-card">
@@ -44,15 +44,17 @@ function Projects() {
               title="Pentesting Windows AD"
               description="This project showcases a homemade lab environment for practicing pentesting on Windows Active Directory.
               The lab includes a Windows Server 2019 (Domain Controller), two Windows 10 clients, and a Kali Linux machine.
-              The project dives deep into the complexities od Active Directory, exploring its architecture, common vulnerabilities,
+              The project dives deep into the complexities of Active Directory, exploring its architecture, common vulnerabilities,
               and real-world Proof of Concept (PoC) attacks"
               demoLink="https://www.linkedin.com/posts/ivan-iroslavov-petkov-80b960236_projectdocumentation-activity-7238919081498734592-8PvE?utm_source=share&utm_medium=member_desktop"
             />
           </Col>
         </Row>
+        {/* Centering Type2 component with a specified Col width */}
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}> 
-          <Col>
+          <Col md="auto">  {/* Use 'md="auto"' for dynamic width based on content */}
             <Type2 />
+            <Spinner animation="border" variant="primary" />
           </Col>
         </Row>
       </Container>
