@@ -51,16 +51,13 @@ function Projects() {
           </Col>
         </Row>
         {/* Centering Type2 component with a specified Col width */}
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}> 
-          <Col md="auto">  {/* Use 'md="auto"' for dynamic width based on content */}
-            <Type2 />
-          </Col>
+        <Container>
           <Row style={{ justifyContent: "center", paddingBottom: "10px" }}> 
-            <Col md="auto">
-              <Spinner animation="border" variant="primary" />
+            <Col md="auto">  {/* Use 'md="auto"' for dynamic width based on content */}
+              <Type2 />
             </Col>
           </Row>
-        </Row>
+        </Container>
       </Container>
     </Container>
   );
