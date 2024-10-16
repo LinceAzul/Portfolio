@@ -3,7 +3,7 @@
   <a href="https://portfolio-linceazul.vercel.app/" target="_blank">linceazul.web</a>
 </h2>
 <div align="center">
-  <img alt="Demo" src="./Images/img.png" />
+  <img alt="Demo" src="./Images/image.png" />
 </div>
 
 <br/>
