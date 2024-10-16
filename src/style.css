@@ -478,20 +478,30 @@ button:focus {
   padding: 20px;
 }
  */
-.more-projects {
+ .more-projects {
   display: flex;
   flex-direction: column; /* Cambia a columna en móviles */
-  align-items: center; /* Centra los elementos */
-  padding: 20px; /* Añade padding */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  
+  /* Usamos unidades relativas para asegurar la responsividad */
+  padding: 10%; /* Espacio alrededor del contenido */
+  
+  /* Tamaño máximo del contenedor, ajustándose a diferentes pantallas */
+  width: 80%; 
+  max-width: 600px; /* Limita el ancho máximo en pantallas grandes */
+  
+  /* Asegura que ocupe todo el alto disponible del viewport */
+  min-height: 50vh;
 }
 
-@media (min-width: 768px) { /* Para pantallas más grandes */
+@media (min-width: 768px) {
   .more-projects {
-      flex-direction: row; /* Cambia a fila en pantallas grandes */
-      justify-content: center; /* Centra horizontalmente */
+    flex-direction: row; /* Cambia a fila en pantallas más grandes */
+    width: 60%; /* Reduce el ancho */
+    padding: 5%; /* Menos padding en pantallas grandes */
   }
 }
-
 
 .more-projects h2 {
   color: rgba(122, 131, 122, 0.733); /* Consistent text color */
