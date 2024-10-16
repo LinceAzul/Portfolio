@@ -50,8 +50,11 @@ function Projects() {
             />
           </Col>
         </Row>
-
-        <Type2 />
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}> 
+          <Col>
+            <Type2 />
+          </Col>
+        </Row>
       </Container>
     </Container>
   );
