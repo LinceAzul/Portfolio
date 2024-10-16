@@ -51,13 +51,7 @@ function Projects() {
           </Col>
         </Row>
 
-        <Row className="more-projects">
-          <Col className="text-center">
-           {/*  <h2>Upcoming Projects on the Horizon...</h2> */}
-            <Type2 />
-            <Spinner animation="border" variant="primary" />
-          </Col>
-        </Row>
+        <Type2 />
       </Container>
     </Container>
   );
