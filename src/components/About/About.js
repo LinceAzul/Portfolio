@@ -63,82 +63,83 @@ function About() {
             </ListGroup>
           </Col>
         </Row>
+        
+        <br />
+        <h1 className="project-heading">
+          What I <strong className="purple">Bring to the Table</strong>
+        </h1>
+        <div className="skills-container">
+          <Row className="skill-list">
+            <Col md={6}>
+              <ListGroup>
+                <ListGroup.Item className="skill-card">
+                  <h3>🐧 Linux and Networking Skills</h3>
+                  <p>Proficient in Linux, task automation, and virtualization.</p>
+                  <p>
+                    Skilled in network administration and wireless networks, with hands-on experience in traffic analysis, 
+                    TCP/IP protocols, SSL/TLS, and network design using tools like Packet Tracer and GNS3.
+                  </p>
+                </ListGroup.Item>
+                <ListGroup.Item className="skill-card">
+                  <h3>🛠️ Cybersecurity Knowledge</h3>
+                  <p>
+                    Skilled in using Kali Linux and various key tools such as Wireshark, Nmap, Metasploit, BurpSuite, 
+                    Hydra, and many more.
+                  </p>
+                  <p>
+                    Experienced in CTF challenges on platforms like TryHackMe, Hack The Box, TCM Academy, DVWA, and 
+                    practicing real-world attack/defense scenarios in homemade labs.
+                  </p>
+                </ListGroup.Item>
+                <ListGroup.Item className="skill-card">
+                  <h3>💻 Adept in Many Programming Languages</h3>
+                  <p>
+                    Experience in Java developing compilers (CUP, JFLEX), socket management, web design (SpringBoot, JPA, ...).
+                  </p>
+                  <p>
+                    Competent in other languages: C/C++, SQL, PL/SQL, Python, Angular, Bash, Assembly, etc.
+                  </p>
+                  <p>
+                    Advanced experience in C/C++, SQL, Haskell, CUP, JFLEX, HTML, CSS, TypeScript, Angular, SpringBoot, 
+                    and JPA, with basic knowledge of Python, ARM, and Bash scripting.
+                  </p>
+                </ListGroup.Item>
+              </ListGroup>
+            </Col>
+            <Col md={6}>
+              <ListGroup>
+                <ListGroup.Item className="skill-card">
+                  <h3>🚀 Passionate Learner and Excellent Communicator</h3>
+                  <p>
+                    Eager to continuously expand my expertise, especially in dynamic fields such as cybersecurity or AI.
+                  </p>
+                  <p>
+                    Approachable and communicative, I thrive on sharing knowledge and connecting with others.
+                  </p>
+                </ListGroup.Item>
+                <ListGroup.Item className="skill-card">
+                  <h3>💼 Problem Solver</h3>
+                  <p>
+                    Proficient in addressing complex challenges with a systematic approach. I excel in identifying 
+                    issues and implementing effective solutions that enhance operational efficiency across diverse contexts.
+                  </p>
+                </ListGroup.Item>
+                <ListGroup.Item className="skill-card">
+                  <h3>📚 Self-Motivated and Dedicated</h3>
+                  <p>
+                    Committed to lifelong learning and ongoing self-education in cybersecurity and technology.
+                  </p>
+                  <p>
+                    Fully invested in putting forth my best effort to achieve goals and overcome challenges.
+                  </p>
+                </ListGroup.Item>
+              </ListGroup>
+            </Col>
+          </Row>
+        </div>
 
-    <h1 className="project-heading">
-      What I <strong className="purple">Bring to the Table</strong>
-    </h1>
-    <div className="skills-container">
-      <Row className="skill-list">
-        <Col md={6}>
-          <ListGroup>
-            <ListGroup.Item className="skill-card">
-              <h3>🐧 Linux and Networking Skills</h3>
-              <p>Proficient in Linux, task automation, and virtualization.</p>
-              <p>
-                Skilled in network administration and wireless networks, with hands-on experience in traffic analysis, 
-                TCP/IP protocols, SSL/TLS, and network design using tools like Packet Tracer and GNS3.
-              </p>
-            </ListGroup.Item>
-            <ListGroup.Item className="skill-card">
-              <h3>🛠️ Cybersecurity Knowledge</h3>
-              <p>
-                Skilled in using Kali Linux and various key tools such as Wireshark, Nmap, Metasploit, BurpSuite, 
-                Hydra, and many more.
-              </p>
-              <p>
-                Experienced in CTF challenges on platforms like TryHackMe, Hack The Box, TCM Academy, DVWA, and 
-                practicing real-world attack/defense scenarios in homemade labs.
-              </p>
-            </ListGroup.Item>
-            <ListGroup.Item className="skill-card">
-              <h3>💻 Adept in Many Programming Languages</h3>
-              <p>
-                Experience in Java developing compilers (CUP, JFLEX), socket management, web design (SpringBoot, JPA, ...).
-              </p>
-              <p>
-                Competent in other languages: C/C++, SQL, PL/SQL, Python, Angular, Bash, Assembly, etc.
-              </p>
-              <p>
-                Advanced experience in C/C++, SQL, Haskell, CUP, JFLEX, HTML, CSS, TypeScript, Angular, SpringBoot, 
-                and JPA, with basic knowledge of Python, ARM, and Bash scripting.
-              </p>
-            </ListGroup.Item>
-          </ListGroup>
-        </Col>
-        <Col md={6}>
-          <ListGroup>
-            <ListGroup.Item className="skill-card">
-              <h3>🚀 Passionate Learner and Excellent Communicator</h3>
-              <p>
-                Eager to continuously expand my expertise, especially in dynamic fields such as cybersecurity or AI.
-              </p>
-              <p>
-                Approachable and communicative, I thrive on sharing knowledge and connecting with others.
-              </p>
-            </ListGroup.Item>
-            <ListGroup.Item className="skill-card">
-              <h3>💼 Problem Solver</h3>
-              <p>
-                Proficient in addressing complex challenges with a systematic approach. I excel in identifying 
-                issues and implementing effective solutions that enhance operational efficiency across diverse contexts.
-              </p>
-            </ListGroup.Item>
-            <ListGroup.Item className="skill-card">
-              <h3>📚 Self-Motivated and Dedicated</h3>
-              <p>
-                Committed to lifelong learning and ongoing self-education in cybersecurity and technology.
-              </p>
-              <p>
-                Fully invested in putting forth my best effort to achieve goals and overcome challenges.
-              </p>
-            </ListGroup.Item>
-          </ListGroup>
-        </Col>
-      </Row>
-    </div>
 
-
-{/*         <h1 className="project-heading">
+        {/*<h1 className="project-heading">
           <strong className="purple">Tools</strong> I use
         </h1> */}
         {/* <Toolstack /> */}

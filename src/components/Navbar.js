@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 import { ImBlog } from "react-icons/im";
+import lynx from "../Assets/BlueLynx_Logo_Icon.png";
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
@@ -35,8 +36,8 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          {/* <img src={lynx} className="img-fluid logo" alt="brand" /> */}
-          <b className="purple">LinceAzul</b>
+          <img src={lynx} className="img-fluid logo" alt="brand" />
+          <b className="purple">Ivan (LinceAzul)</b>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
