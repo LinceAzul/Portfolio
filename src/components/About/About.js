@@ -1,11 +1,11 @@
 import React from "react";
-import { Container, Row, Col, ListGroup, Card } from "react-bootstrap";
+import { Container, Row, Col, ListGroup } from "react-bootstrap";
 import Particle from "../Particle";
-import Github from "./Github";
-import Techstack from "./Techstack";
+/* import Github from "./Github";
+import Techstack from "./Techstack"; */
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
-import Toolstack from "./Toolstack";
+/* import Toolstack from "./Toolstack"; */
 
 function About() {
   return (
@@ -65,7 +65,7 @@ function About() {
         </Row>
 
     <h1 className="project-heading">
-      What I <strong className="blue">Bring to the Table</strong>
+      What I <strong className="purple">Bring to the Table</strong>
     </h1>
     <div className="skills-container">
       <Row className="skill-list">

@@ -1,13 +1,10 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Spinner } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import SpamGuard from "../../Assets/Projects/SpamGuard.png";
+import PentestingAD from "../../Assets/Projects/Pentesting_AD.png";
+import Type2 from "./Type2";
 
 function Projects() {
   return (
@@ -17,75 +14,48 @@ function Projects() {
         <h1 className="project-heading">
           My Recent <strong className="purple">Works </strong>
         </h1>
+        <br />
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+        In my free time, I enjoy working on projects that help me apply and deepen the theoretical knowledge I've gained
+        over the years. These projects allow me to learn by doing, experimenting, and putting my skills into practice.
+        <br />
+        <br />
+        If you have any ideas or would like to collaborate on a project, feel free to reach out.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+          <Col md={5} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={SpamGuard}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="SpamGuard"
+              description="AI-powered project focused on detecting spam e-mails by fine-tuning the Llama2 AI model.
+              The project leverages advanced machine learning techniques and large language models (LLMs) to identify and
+              flag potentially harmful email content with high accuracy. The model can identify non-desired e-mails, scam emails,
+              fake giveaways, fake hacking emails, potentially harmful URLs, and more."
+              ghLink="https://github.com/LinceAzul/malicious-mail-detector"
+              demoLink="https://www.linkedin.com/posts/emilio-rodrigo-carreira-villalta-2a62aa250_projectdocumentation-activity-7238879148109135875-nhjs?utm_source=share&utm_medium=member_desktop"
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={5} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={PentestingAD}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Pentesting Windows AD"
+              description="This project showcases a homemade lab environment for practicing pentesting on Windows Active Directory.
+              The lab includes a Windows Server 2019 (Domain Controller), two Windows 10 clients, and a Kali Linux machine.
+              The project dives deep into the complexities od Active Directory, exploring its architecture, common vulnerabilities,
+              and real-world Proof of Concept (PoC) attacks"
+              demoLink="https://www.linkedin.com/posts/ivan-iroslavov-petkov-80b960236_projectdocumentation-activity-7238919081498734592-8PvE?utm_source=share&utm_medium=member_desktop"
             />
           </Col>
+        </Row>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
+        <Row className="more-projects">
+          <Col className="text-center">
+           {/*  <h2>Upcoming Projects on the Horizon...</h2> */}
+            <Type2 />
+            <Spinner animation="border" variant="primary" />
           </Col>
         </Row>
       </Container>

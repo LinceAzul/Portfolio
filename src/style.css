@@ -310,7 +310,7 @@ button:focus {
   color: #715ff8; /* Mi nombre: "Hi there, I'm IVAN" */
 }
 
-/* Esto es en el inicio del homre, la simulación de typing interactivo */
+/* Esto es en el inicio del home y los Projects, la simulación de typing interactivo */
 .Typewriter__wrapper { 
   font-size: 2.2em !important;
   color: #7a6adf !important;
@@ -471,6 +471,29 @@ button:focus {
 /* --------- */
 /* Projects */
 /* --------- */
+/* .more-projects {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+} */
+
+.more-projects {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.more-projects h2 {
+  color: rgba(122, 131, 122, 0.733); /* Consistent text color */
+}
+
+.more-projects .spinner-border {
+  margin-top: 15px; /* Space between text and spinner */
+}
+
+
+
 .project-section {
   position: relative !important;
   padding-top: 150px !important;
