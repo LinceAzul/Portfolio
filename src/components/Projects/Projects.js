@@ -54,8 +54,12 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}> 
           <Col md="auto">  {/* Use 'md="auto"' for dynamic width based on content */}
             <Type2 />
-            <Spinner animation="border" variant="primary" />
           </Col>
+          <Row style={{ justifyContent: "center", paddingBottom: "10px" }}> 
+            <Col md="auto">
+              <Spinner animation="border" variant="primary" />
+            </Col>
+          </Row>
         </Row>
       </Container>
     </Container>
