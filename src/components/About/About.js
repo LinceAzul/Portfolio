@@ -94,14 +94,10 @@ function About() {
                 <ListGroup.Item className="skill-card">
                   <h3>💻 Adept in Many Programming Languages</h3>
                   <p>
-                    Experience in Java developing compilers (CUP, JFLEX), socket management, web design (SpringBoot, JPA, ...).
+                    Experience in Java developing compilers (CUP, JFLEX), socket management, web design (SpringBoot, JPA, ...), etc.
                   </p>
                   <p>
-                    Competent in other languages: C/C++, SQL, PL/SQL, Python, Angular, Bash, Assembly, etc.
-                  </p>
-                  <p>
-                    Advanced experience in C/C++, SQL, Haskell, CUP, JFLEX, HTML, CSS, TypeScript, Angular, SpringBoot, 
-                    and JPA, with basic knowledge of Python, ARM, and Bash scripting.
+                    Competent in other languages: C/C++, SQL, PL/SQL, Python, Angular, React, Bash, Assembly, etc.
                   </p>
                 </ListGroup.Item>
               </ListGroup>
