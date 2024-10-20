@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 import { ImBlog } from "react-icons/im";
-import lynx from "../Assets/BlueLynx_Logo_Icon.png";
+import lynx from "../Assets/LinceCapucha2.jpeg";
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
@@ -35,10 +35,21 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          <img src={lynx} className="img-fluid logo" alt="brand" />
-          <b className="purple">Ivan (LinceAzul)</b>
-        </Navbar.Brand>
+      <Navbar.Brand href="/" className="d-flex align-items-center">
+        <img
+          src={lynx}
+          alt="brand"
+          style={{
+            width: '50px', // Ajusta el tamaño según tu preferencia
+            height: '50px',
+            borderRadius: '50%', // Hace la imagen circular
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Añade una sombra suave
+            marginRight: '7px', // Espacio entre imagen y texto
+          }}
+        />
+        <b className="purple">Ivan (LinceAzul)</b>
+      </Navbar.Brand>
+
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
