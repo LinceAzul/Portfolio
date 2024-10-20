@@ -50,9 +50,6 @@ function Projects() {
             />
           </Col>
         </Row>
-        <div class="more-projects">
-          <Type2 />
-        </div>
         
       </Container>
     </Container>
