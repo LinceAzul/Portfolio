@@ -364,6 +364,12 @@ button:focus {
   text-align: left;
 }
 
+.home-about-body2 {
+  /* padding-top: 50px; */
+  font-size: 1.2em !important;
+  text-align: left;
+}
+
 .home-about-social {
   text-align: center !important;
   padding-top: 25px;

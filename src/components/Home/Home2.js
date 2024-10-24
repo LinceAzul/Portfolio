@@ -47,8 +47,22 @@ function Home2() {
               Whenever possible, I try to apply my passion participating in CTFs and doing
               practical projects. The{" "}
               <b className="purple">synergy</b> of <b className="red">cybersecurity</b>{" "}
-              and{" "} <b className="green">AI</b> is inevitable 🤝.
+              and{" "} <b className="green">AI</b> is unavoidable 🤝.
             </p>
+            <div style={{ display: 'flex', alignItems: 'center',  paddingTop: '20px' }}>
+              <a href="https://tryhackme.com/r/p/LinceAzul" target="_blank" rel="noopener noreferrer">
+                  <img 
+                      src="https://tryhackme-badges.s3.amazonaws.com/LinceAzul.png" 
+                      alt="Your Image Badge" 
+                      style={{ marginRight: '10px' }} 
+                  />
+              </a>
+              <p className="home-about-body2">
+                I also enjoy playing CTFs and learning in platforms like {" "}
+                <b className="red">TryHackMe </b> so that I can reinforce my <b className="purple">knowledge</b> {" "}
+                with practical experience.
+              </p>
+            </div>
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
