@@ -4,10 +4,14 @@ import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import { Helmet } from "react-helmet"; // Import Helmet
 
 function Home() {
   return (
     <section>
+      <Helmet>
+        <meta name="google-site-verification" content="k9FDfWJTLRlekHw-b0lc_ClRY9AxjJkQ4gJ4Yhz1LV4" />
+      </Helmet>
       <Container fluid className="home-section" id="home">
         <Particle />
         <Container className="home-content">

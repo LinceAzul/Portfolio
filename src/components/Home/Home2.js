@@ -31,7 +31,7 @@ function Home2() {
               </i> and 
                <i>
                 <b className="blue"> defensive </b>
-              </i> point of view.
+              </i> point of view. I usually identify myself online as <b className="blue">LinceAzul</b>.
               <br />
               <br />
               My field of Interest is {" "}
