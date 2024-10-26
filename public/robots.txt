@@ -1,3 +1,15 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: 
+
+# Allowing Googlebot to access the entire site
+User-agent: Googlebot
+Allow: /
+
+# Disallowing any private or sensitive directories (if applicable)
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
+
+# Sitemap location (update with your actual sitemap URL if you have one)
+Sitemap: https://portfolio-linceazul.vercel.app/sitemap.xml
