@@ -1,0 +1,25 @@
+[00:00:01.039] Server  LOG      ✓ Ready in 759ms
+[00:00:10.438] Browser WARN    Image with src "/projects/VulnerabilityScanner.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:10.438] Browser WARN    Image with src "/projects/AD-PentestingProject.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:10.438] Browser WARN    Image with src "/projects/maliciousMailDetector.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:10.569] Browser WARN    Image with src "/profile.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:50.280] Server  LOG      ✓ Compiled in 262ms
+[00:00:53.888] Server  LOG      ✓ Compiled in 216ms
+[00:02:45.633] Server  LOG      ✓ Compiled in 82ms
+[00:04:35.644] Server  LOG      ✓ Compiled in 49ms
+[00:05:00.584] Server  LOG      ✓ Compiled in 79ms
+[00:05:16.009] Server  LOG      ✓ Compiled in 40ms
+[00:05:49.577] Server  LOG      ✓ Compiled in 62ms
+[00:19:34.815] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\LinceAzul\Desktop\test\Portfolio\app'
+[00:19:34.819] Server  ERROR    ⨯ "unhandledRejection:" Error: ENOENT: no such file or directory, scandir 'C:\Users\LinceAzul\Desktop\test\Portfolio\app'
+[00:19:34.823] Server  ERROR    ⨯ "unhandledRejection: " Error: ENOENT: no such file or directory, scandir 'C:\Users\LinceAzul\Desktop\test\Portfolio\app'
+[00:19:34.848] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\LinceAzul\Desktop\test\Portfolio\app'
+[00:19:34.851] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\LinceAzul\Desktop\test\Portfolio\app'
+[00:19:34.867] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\LinceAzul\Desktop\test\Portfolio\app'
+[00:19:34.869] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\LinceAzul\Desktop\test\Portfolio\app'
+[00:19:34.877] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\LinceAzul\Desktop\test\Portfolio\app'
+[00:19:34.881] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\LinceAzul\Desktop\test\Portfolio\app'
+[00:19:34.890] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\LinceAzul\Desktop\test\Portfolio\app'
+[00:19:34.891] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\LinceAzul\Desktop\test\Portfolio\app'
+[00:19:34.911] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\LinceAzul\Desktop\test\Portfolio\app'
+[00:19:34.913] Server  ERROR   Error: ENOENT: no such file or directory, scandir 'C:\Users\LinceAzul\Desktop\test\Portfolio\app'
