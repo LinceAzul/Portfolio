@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navItems = [
   { name: "Experience", href: "#experience" },
@@ -83,9 +84,18 @@ export default function Navbar() {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity -ml-4 sm:-ml-6 lg:-ml-8"
           >
-            Portfolio
+            <Image
+              src="/linceazul_logo.jpg"
+              alt="LinceAzul Logo"
+              width={40}
+              height={40}
+              className="rounded-full object-cover"
+            />
+            <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              LinceAzul
+            </span>
           </a>
 
           {/* Desktop Menu */}
