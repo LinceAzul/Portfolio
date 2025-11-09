@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   description: "Professional portfolio showcasing experience in cybersecurity and artificial intelligence. Explore my projects, certifications, and expertise.",
   keywords: ["cybersecurity", "artificial intelligence", "AI", "portfolio", "software engineer"],
   authors: [{ name: "Your Name" }],
+  icons: {
+    icon: "/linceazul_logo.jpg",
+    shortcut: "/linceazul_logo.jpg",
+    apple: "/linceazul_logo.jpg",
+  },
   openGraph: {
     title: "Portfolio | Cybersecurity & AI Specialist",
     description: "Professional portfolio showcasing experience in cybersecurity and artificial intelligence.",
