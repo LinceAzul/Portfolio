@@ -19,7 +19,7 @@ export const contactInfo: ContactInfo = {
     github: "https://github.com/LinceAzul",
     linkedin: "https://www.linkedin.com/in/ivan-iroslavov-petkov-80b960236/",
     hackthebox: "https://app.hackthebox.com/profile/169876",
-    tryhackme: "https://tryhackme.com/p/LinceAzule",
+    tryhackme: "https://tryhackme.com/p/LinceAzul",
     /*website: "https://yourwebsite.com",*/
   },
 };

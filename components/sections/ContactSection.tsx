@@ -1,13 +1,71 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState, FormEvent } from "react";
 import Section from "@/components/Section";
 import { contactInfo } from "@/data/contact";
-import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Send, CheckCircle, AlertCircle } from "lucide-react";
 import HackTheBoxIcon from "@/components/icons/HackTheBoxIcon";
 import TryHackMeIcon from "@/components/icons/TryHackMeIcon";
 
 export default function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message: data.message || "Message sent successfully!",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message: data.error || "Failed to send message. Please try again.",
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: "An error occurred. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
   return (
     <Section id="contact" title="Contact" subtitle="Let's connect and collaborate">
       <div className="max-w-4xl mx-auto">
@@ -122,12 +180,7 @@ export default function ContactSection() {
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               Send a Message
             </h3>
-            <form
-              action={`mailto:${contactInfo.email}`}
-              method="post"
-              encType="text/plain"
-              className="space-y-4"
-            >
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label
                   htmlFor="name"
@@ -139,6 +192,8 @@ export default function ContactSection() {
                   type="text"
                   id="name"
                   name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white"
                 />
@@ -154,6 +209,8 @@ export default function ContactSection() {
                   type="email"
                   id="email"
                   name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white"
                 />
@@ -169,16 +226,37 @@ export default function ContactSection() {
                   id="message"
                   name="message"
                   rows={5}
+                  value={formData.message}
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white resize-none"
                 />
               </div>
+              
+              {submitStatus.type && (
+                <div
+                  className={`flex items-center gap-2 p-3 rounded-lg ${
+                    submitStatus.type === "success"
+                      ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400"
+                      : "bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400"
+                  }`}
+                >
+                  {submitStatus.type === "success" ? (
+                    <CheckCircle size={18} />
+                  ) : (
+                    <AlertCircle size={18} />
+                  )}
+                  <span className="text-sm">{submitStatus.message}</span>
+                </div>
+              )}
+
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
+                disabled={isSubmitting}
+                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Send size={18} />
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           </motion.div>
