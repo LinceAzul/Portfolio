@@ -12,7 +12,7 @@ export interface ContactInfo {
 }
 
 export const contactInfo: ContactInfo = {
-  email: "ivaniroslavov@proton.me",
+  email: "lincelsq@gmail.com",
   /*phone: "+1 (555) 123-4567",*/
   location: "Málaga, Spain",
   social: {

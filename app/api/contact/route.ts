@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
+import { Resend } from "resend";
 import { contactInfo } from "@/data/contact";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
@@ -23,34 +26,45 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Here you can integrate with an email service like:
-    // - Resend (https://resend.com)
-    // - SendGrid
-    // - Nodemailer
-    // - Formspree
-    // For now, we'll return success and log the data
-    // In production, you should send the email here
-    
-    console.log("Contact form submission:", {
-      name,
-      email,
-      message,
-      to: contactInfo.email,
+    if (!process.env.RESEND_API_KEY) {
+      console.error("RESEND_API_KEY is not set.");
+      return NextResponse.json(
+        { error: "Email service is not configured. Please try again later." },
+        { status: 500 }
+      );
+    }
+
+    const fromEmail =
+      process.env.RESEND_FROM_EMAIL || "Portfolio Contact <onboarding@resend.dev>";
+
+    const result = await resend.emails.send({
+      from: fromEmail,
+      to: [contactInfo.email],
+      reply_to: email,
+      subject: `New contact form message from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      html: `
+        <div>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Message:</strong></p>
+          <p>${message.replace(/\n/g, "<br />")}</p>
+        </div>
+      `,
     });
 
-    // TODO: Integrate with your email service here
-    // Example with a service:
-    // await sendEmail({
-    //   to: contactInfo.email,
-    //   from: email,
-    //   subject: `Contact from ${name}`,
-    //   text: message,
-    // });
+    if (result.error) {
+      console.error("Resend error:", result.error);
+      return NextResponse.json(
+        { error: "Failed to send message. Please try again later." },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json(
-      { 
-        success: true, 
-        message: "Message sent successfully! I'll get back to you soon." 
+      {
+        success: true,
+        message: "Message sent successfully! I'll get back to you soon.",
       },
       { status: 200 }
     );
